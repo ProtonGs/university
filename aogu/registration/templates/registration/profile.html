@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% block title %} registration {% endblock %}
+
+{% block content %}
+<div class="profile-wrapper">
+    <div class="profile-block">
+      <h1>профиль: {{ user.username }}</h1>
+      <a href="{% url 'change_login' %}" class="profile-link">изменить имя</a>
+      <p>Email: {{ user.email }}</p>
+      <a href="{% url 'password_change' %}" class="profile-link">изменить пороль</a>
+      <a href="{% url 'add_shoes' %}" class="profile-link">добавить обувь</a>
+      <a href="{% url 'logout' %}" class="logout-button">выйти</a>
+    </div>
+</div>
+{% endblock %}

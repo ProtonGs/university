@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+
+ 
+
+{% block title %} aogu {% endblock %}
+
+{% block content %}
+    <div class="document-submission">
+        <div class="submission-text1">
+            <p class="submission-text">Вы будете подавать документы как</p>
+        </div>
+        <div class="submission-btn1">
+            <button class="submission-btn student-btn"><a href="{% url 'register_student' %}">Студент</a> </button>
+            <button class="submission-btn teacher-btn"><a href="{% url 'register_teacher' %}">Преподаватель</a></button>
+        </div>
+    </div>
+{% endblock %}
