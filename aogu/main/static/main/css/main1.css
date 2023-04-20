@@ -442,3 +442,7 @@ button:focus {
   .submission-btn:hover {
     background-color: #0069d9;
   }
+  .for_admin{
+    padding-left: 640px;
+    font-size: 12px;
+  }

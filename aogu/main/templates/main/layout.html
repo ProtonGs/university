@@ -22,7 +22,6 @@
             <li class="header-menu__item"><a href="{% url 'login' %}">Войти</a></li>
             {% endif %}
             {% if user.is_authenticated %}
-            <li class="header-menu__item"><a href="{% url 'logout' %}">Выйти</a></li>
             {% endif %}
           </ul>
         </nav>
