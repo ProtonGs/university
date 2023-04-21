@@ -22,3 +22,6 @@ class Student(models.Model):
     disability = models.BooleanField(default=False)
     hobbies = models.CharField(max_length=255)
     religious_beliefs = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.user} {self.user.last_name}"
