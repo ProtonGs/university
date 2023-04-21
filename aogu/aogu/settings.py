@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "student",
-    'teachers',
+    'teacher',
     "crispy_bootstrap5",
     'main',
     'registration',
