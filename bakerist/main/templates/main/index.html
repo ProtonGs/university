@@ -1,0 +1,123 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+
+ 
+
+{% block title %} prismail {% endblock %}
+
+{% block content %}
+  <section class="face">
+    <div class="face_container">
+      <div class="face_block">
+        <div class="block_header"><h1 class="header_h1">Bakerist</h1>
+        <p>Baking made with love and kindness</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="catalog_block">
+    <div class="product_background">
+      <div class="product_container">
+        <div class="product_title"><p class="product_title-text">завтраки</p></div>
+        <ul class="product_list">
+            {% for breakfast in breakfast %}
+            <li class="product_list-item">
+            <div class="product_card">
+                <div class="product_image">
+                <img src="{{ breakfast.image.url }}" alt="{{ breakfast.name }}">
+                </div>
+                <div class="product_details">
+                <h3 class="product_name">{{ breakfast.name }}</h3>
+                <p class="product_price">{{ breakfast.price }} ₸</p>
+                <a class="product_button" href="#">Add to cart</a>
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="product_container">
+        <div class="product_title"><p class="product_title-text">выпечка</p></div>
+        <ul class="product_list">
+            {% for bakery in bakery %}
+            <li class="product_list-item">
+            <div class="product_card">
+                <div class="product_image">
+                <img src="{{ bakery.image.url }}" alt="{{ bakery.name }}">
+                </div>
+                <div class="product_details">
+                <h3 class="product_name">{{ bakery.name }}</h3>
+                <p class="product_price">{{ bakery.price }} ₸</p>
+                <a class="product_button" href="#">Add to cart</a>
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="product_container">
+        <div class="product_title"><p class="product_title-text">первое блюдо</p></div>
+        <ul class="product_list">
+            {% for firstmeal in firstmeal %}
+            <li class="product_list-item">
+            <div class="product_card">
+                <div class="product_image">
+                <img src="{{ firstmeal.image.url }}" alt="{{ firstmeal.name }}">
+                </div>
+                <div class="product_details">
+                <h3 class="product_name">{{ firstmeal.name }}</h3>
+                <p class="product_price">{{ firstmeal.price }} ₸</p>
+                <a class="product_button" href="#">Add to cart</a>
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="product_container">
+        <div class="product_title"><p class="product_title-text">ОСНОВНОЕ ГОРЯЧЕЕ</p></div>
+        <ul class="product_list">
+            {% for mainhot in mainhot %}
+            <li class="product_list-item">
+            <div class="product_card">
+                <div class="product_image">
+                <img src="{{ mainhot.image.url }}" alt="{{ mainhot.name }}">
+                </div>
+                <div class="product_details">
+                <h3 class="product_name">{{ mainhot.name }}</h3>
+                <p class="product_price">{{ mainhot.price }} ₸</p>
+                <a class="product_button" href="#">Add to cart</a>
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="product_container">
+        <div class="product_title"><p class="product_title-text">ЗАКУСКИ</p></div>
+        <ul class="product_list">
+            {% for snacks in snacks %}
+            <li class="product_list-item">
+            <div class="product_card">
+                <div class="product_image">
+                <img src="{{ snacks.image.url }}" alt="{{ snacks.name }}">
+                </div>
+                <div class="product_details">
+                <h3 class="product_name">{{ snacks.name }}</h3>
+                <p class="product_price">{{ snacks.price }} ₸</p>
+                <a class="product_button" href="#">Add to cart</a>
+                </div>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="main_footer">
+    <div class="footer_container">
+      <p>© 2023 Example Company. All Rights Reserved. | 123 Main Street, Anytown 12345 | (555) 555-5555 | info@example.com | Follow us on: [social media icons]</p>
+    </div>
+  </footer>
+{% endblock %}

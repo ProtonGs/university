@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %} Добавить товары {% endblock %}
+{% block content %}
+    <section class="product-management">
+        <div class="product-management-container">
+            <h2 class="product-management-header">Управление продуктом</h2>
+            <div class="product-management-actions">
+            <button class="add-product-btn">Добавить продукт</button>
+            <button class="delete-product-btn">Удалить продукт</button>
+            </div>
+        </div>
+    </section>
+    <section class="add_product-block">
+        <div class="add_product">
+            <div class="product_image-add">
+                <img src="{% static 'main/img/full-english-7355w-2.jpg' %}" alt="not found">
+            </div>
+            <a href="{% url 'add_breakfast' %}">Добавить завтраки</a>
+        </div>
+        <div class="add_product">
+            <div class="product_image-add">
+                <img src="{% static 'main/img/Croissant_hero-1-1024x683.jpg' %}" alt="not found">
+            </div>
+            <a href="{% url 'add_bakery' %}">Добавить выпечку</a>
+        </div>
+        <div class="add_product">
+            <div class="product_image-add">
+                <img src="{% static 'main/img/ovoshnoi_sup_klassicheskii-327375.jpg' %}" alt="not found">
+            </div>
+            <a href="{% url 'add_firstmeal' %}">Добавить первое блюдо</a>
+        </div>
+        <div class="add_product">
+            <div class="product_image-add">
+                <img src="{% static 'main/img/csm_WEB_Ribeye2_4c240f1491copy.jpg' %}" alt="not found">
+            </div>
+            <a href="{% url 'add_mainhot' %}">Добавить основное горячее</a>
+        </div>
+        <div class="add_product">
+            <div class="product_image-add">
+                <img src="{% static 'main/img/kartofel_fri_v_domashnih_usloviyah-36496.jpg' %}" alt="not found">
+            </div>
+            <a href="{% url 'add_snacks' %}">Добавить закуски</a>
+        </div>
+    </section>
+{% endblock %}

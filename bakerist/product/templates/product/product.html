@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %} Добавить товары {% endblock %}
+{% block content %}
+    <section class="product-management">
+        <div class="product-management-container">
+            <h2 class="product-management-header">Управление продуктом</h2>
+            <div class="product-management-actions">
+            <button class="add-product-btn"><a href="{% url 'add_product' %}">Добавить продукт</a></button>
+            <button class="delete-product-btn">Удалить продукт</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %} Добавить основное горячее {% endblock %}
+
+{% block content %}
+    <div class="product_block">
+        <h1 class="add_product-text">Добавить основное горячее</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </div>
+{% endblock %}
